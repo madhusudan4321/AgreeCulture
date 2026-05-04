@@ -1,0 +1,226 @@
+{
+  "crops": {
+    "rice": {
+      "name": "Rice",
+      "season": "Kharif (June - November)",
+      "soil_type": "Clay or loamy soil with good water retention",
+      "water_requirement": "High - 1200 to 2000 mm of rainfall needed",
+      "fertilizer": "Urea (Nitrogen), DAP (Phosphorus), MOP (Potassium)",
+      "steps": [
+        "Prepare the field by plowing and leveling it properly.",
+        "Soak seeds for 24 hours before sowing.",
+        "Transplant seedlings to main field after 25-30 days.",
+        "Maintain 5 cm of standing water during tillering stage.",
+        "Apply fertilizers in split doses: at transplanting, tillering, and panicle initiation.",
+        "Harvest when 80% grains turn golden yellow (around 110-145 days)."
+      ],
+      "tips": "Rice grows best in warm, humid conditions. Ensure proper water management to avoid water stress.",
+      "common_diseases": ["Blast", "Brown Spot", "Sheath Blight"],
+      "yield": "2.5 to 5 tonnes per hectare"
+    },
+    "wheat": {
+      "name": "Wheat",
+      "season": "Rabi (October - March)",
+      "soil_type": "Loamy or clay loam soil with good drainage",
+      "water_requirement": "Medium - 450 to 650 mm of water needed",
+      "fertilizer": "Urea for Nitrogen, DAP for Phosphorus and Potassium",
+      "steps": [
+        "Plow and prepare the field in late October.",
+        "Sow seeds at 100-125 kg per hectare, 5 cm deep.",
+        "First irrigation (crown root initiation) after 20-25 days.",
+        "Apply nitrogen in 2-3 splits for best results.",
+        "Control weeds in the first 30-35 days.",
+        "Harvest when grains are hard and moisture is below 14% (around 120-150 days)."
+      ],
+      "tips": "Wheat requires cool weather during growing season and dry weather at harvest time.",
+      "common_diseases": ["Rust", "Smut", "Karnal Bunt"],
+      "yield": "3 to 5 tonnes per hectare"
+    },
+    "maize": {
+      "name": "Maize (Corn)",
+      "season": "Kharif (June - September) or Rabi (October - February)",
+      "soil_type": "Well-drained loamy soil, pH 6.0-7.5",
+      "water_requirement": "Medium - 500 to 800 mm of water needed",
+      "fertilizer": "High Nitrogen (Urea), Phosphorus (DAP), Potassium (MOP)",
+      "steps": [
+        "Deep plow the field and add organic compost.",
+        "Sow seeds 4-5 cm deep at 60x20 cm spacing.",
+        "First irrigation immediately after sowing.",
+        "Apply nitrogen fertilizer at knee-high stage.",
+        "Earth up plants at 30 days to support stalk.",
+        "Harvest when husks turn brown and grains are hard (90-110 days)."
+      ],
+      "tips": "Maize is a heavy feeder. Ensure good drainage as it cannot tolerate waterlogging.",
+      "common_diseases": ["Downy Mildew", "Stalk Rot", "Leaf Blight"],
+      "yield": "2.5 to 6 tonnes per hectare"
+    },
+    "cotton": {
+      "name": "Cotton",
+      "season": "Kharif (April - November)",
+      "soil_type": "Deep black cotton soil or loamy soil, pH 6.0-8.0",
+      "water_requirement": "Medium-High - 700 to 1200 mm",
+      "fertilizer": "Balanced NPK: Nitrogen (Urea), Phosphorus (SSP), Potassium (MOP)",
+      "steps": [
+        "Plow field deeply (30-40 cm) and prepare fine tilth.",
+        "Sow BT cotton seeds at 90x60 cm spacing.",
+        "Thin to one plant per hill after 15 days.",
+        "Apply basal dose of fertilizer at sowing.",
+        "Irrigate every 10-15 days depending on soil moisture.",
+        "Pick cotton when bolls are fully open (160-180 days)."
+      ],
+      "tips": "Cotton requires long, warm growing season. Avoid waterlogging especially during early growth.",
+      "common_diseases": ["Bollworm", "Aphids", "Whitefly", "Fusarium Wilt"],
+      "yield": "1.5 to 3 tonnes per hectare (lint)"
+    },
+    "sugarcane": {
+      "name": "Sugarcane",
+      "season": "Year-round (Planted Feb-March or Oct-Nov)",
+      "soil_type": "Well-drained loamy soil, pH 6.0-7.5",
+      "water_requirement": "High - 1500 to 2500 mm per year",
+      "fertilizer": "High Nitrogen, Phosphorus, Potassium; also needs Zinc and Sulfur",
+      "steps": [
+        "Select disease-free 2-3 budded setts for planting.",
+        "Plant in furrows 90 cm apart, 5-8 cm deep.",
+        "Cover with soil and irrigate immediately.",
+        "Apply nitrogen in 3 splits: at planting, 60 and 120 days.",
+        "Earth up canes at 90 days to prevent lodging.",
+        "Harvest after 10-12 months when sugar content is maximum."
+      ],
+      "tips": "Sugarcane is a long-duration crop. Ratoon crop can be taken after first harvest to save costs.",
+      "common_diseases": ["Red Rot", "Smut", "Wilt", "Ratoon Stunting"],
+      "yield": "60 to 100 tonnes per hectare"
+    },
+    "soybean": {
+      "name": "Soybean",
+      "season": "Kharif (June - October)",
+      "soil_type": "Well-drained loamy or clay loam soil, pH 6.0-7.5",
+      "water_requirement": "Medium - 450 to 700 mm",
+      "fertilizer": "Low Nitrogen (fixes own N), Phosphorus (DAP), Potassium (MOP)",
+      "steps": [
+        "Inoculate seeds with Rhizobium culture before sowing.",
+        "Sow seeds at 45x5 cm spacing, 3-4 cm deep.",
+        "Apply basal dose of Phosphorus and Potassium.",
+        "Control weeds in first 30-45 days (critical period).",
+        "Irrigate at flowering and pod-filling stages.",
+        "Harvest when 95% of pods turn brown (90-100 days)."
+      ],
+      "tips": "Soybean is a nitrogen-fixing legume. It improves soil fertility for subsequent crops.",
+      "common_diseases": ["Rust", "Bacterial Pustule", "Charcoal Rot"],
+      "yield": "1.5 to 3 tonnes per hectare"
+    },
+    "potato": {
+      "name": "Potato",
+      "season": "Rabi (October - March)",
+      "soil_type": "Sandy loam or loam soil, pH 5.2-6.4",
+      "water_requirement": "Medium - 500 to 700 mm, requires frequent irrigation",
+      "fertilizer": "High Nitrogen and Potassium, moderate Phosphorus",
+      "steps": [
+        "Prepare well-tilled, loose, friable soil.",
+        "Cut seed tubers ensuring each piece has 2-3 eyes.",
+        "Plant at 60x20 cm spacing, 10-15 cm deep.",
+        "First earthing up at 30 days, second at 45-50 days.",
+        "Apply nitrogen in 2 splits: at planting and after first earthing.",
+        "Harvest when tops dry out and skins are set (70-90 days)."
+      ],
+      "tips": "Potatoes need cool weather and well-aerated soil. Avoid planting in poorly drained fields.",
+      "common_diseases": ["Late Blight", "Early Blight", "Black Scurf", "Mosaic Virus"],
+      "yield": "20 to 30 tonnes per hectare"
+    },
+    "tomato": {
+      "name": "Tomato",
+      "season": "Can be grown year-round with irrigation; best Nov-Jan",
+      "soil_type": "Well-drained sandy loam or loam soil, pH 6.0-7.0",
+      "water_requirement": "Medium - 400 to 600 mm; requires regular irrigation",
+      "fertilizer": "Nitrogen (Urea), Phosphorus (SSP), Potassium (MOP), Calcium",
+      "steps": [
+        "Raise seedlings in nursery beds or pro-trays for 25-30 days.",
+        "Transplant to main field at 75x60 cm spacing.",
+        "Install bamboo stakes for support after transplanting.",
+        "Apply fertilizer in 4-5 splits throughout growth.",
+        "Irrigate every 7-10 days, avoid over-watering.",
+        "Harvest when fruits are firm and turning red (60-80 days after transplanting)."
+      ],
+      "tips": "Tomatoes need full sun and consistent moisture. Irregular watering causes blossom end rot.",
+      "common_diseases": ["Early Blight", "Late Blight", "Fusarium Wilt", "Leaf Curl Virus"],
+      "yield": "25 to 40 tonnes per hectare"
+    },
+    "groundnut": {
+      "name": "Groundnut (Peanut)",
+      "season": "Kharif (June - October)",
+      "soil_type": "Light sandy loam soil, pH 6.0-6.5",
+      "water_requirement": "Medium - 500 to 700 mm",
+      "fertilizer": "Low Nitrogen, Phosphorus (SSP), Potassium, Gypsum at pegging stage",
+      "steps": [
+        "Shell pods just before sowing; do not damage seed coat.",
+        "Sow seeds at 30x10 cm spacing, 4-5 cm deep.",
+        "Apply gypsum (500 kg/ha) at the time of pegging (35-40 days).",
+        "Control weeds in first 45 days; avoid disturbing during pegging.",
+        "Irrigate at critical stages: flowering, pegging, and pod development.",
+        "Harvest when inner shell shows dark veining (110-130 days)."
+      ],
+      "tips": "Groundnut fixes nitrogen. Light sandy soils allow easy pod penetration and harvesting.",
+      "common_diseases": ["Tikka Leaf Spot", "Rust", "Stem Rot", "Bud Necrosis"],
+      "yield": "1.5 to 3 tonnes per hectare"
+    },
+    "mango": {
+      "name": "Mango",
+      "season": "Fruit: March - June (summer fruit)",
+      "soil_type": "Deep well-drained loamy soil, pH 5.5-7.5",
+      "water_requirement": "Low-Medium - 1000 to 1500 mm; dry period needed for flowering",
+      "fertilizer": "NPK in 3 split doses per year; Zinc and Boron for fruit quality",
+      "steps": [
+        "Plant grafted saplings in 1x1x1 m pits during July-August.",
+        "Space trees at 10x10 m (or 5x5 m for high density).",
+        "Apply organic manure in first pit at planting time.",
+        "Irrigate regularly for first 2-3 years; reduce water before flowering.",
+        "Prune dead and criss-crossing branches after harvest.",
+        "Harvest when fruits turn yellowish-green with specific gravity > 1.01 (4-5 months after flowering)."
+      ],
+      "tips": "Mango trees need a dry period before flowering. Avoid waterlogging at any stage.",
+      "common_diseases": ["Powdery Mildew", "Anthracnose", "Mango Malformation", "Sooty Mould"],
+      "yield": "10 to 20 tonnes per hectare (mature trees)"
+    }
+  },
+  "fertilizers": {
+    "urea": {
+      "name": "Urea",
+      "nutrient": "Nitrogen (46% N)",
+      "use": "Applied for vegetative growth, greening of leaves",
+      "crops": ["rice", "wheat", "maize", "sugarcane", "cotton"],
+      "precaution": "Apply when soil is moist; avoid over-application as it burns roots"
+    },
+    "dap": {
+      "name": "DAP (Di-Ammonium Phosphate)",
+      "nutrient": "Phosphorus (46% P2O5) and Nitrogen (18% N)",
+      "use": "Applied at sowing/planting for root development and early growth",
+      "crops": ["wheat", "rice", "potato", "soybean", "maize"],
+      "precaution": "Apply as basal dose; mix well with soil before planting"
+    },
+    "mop": {
+      "name": "MOP (Muriate of Potash)",
+      "nutrient": "Potassium (60% K2O)",
+      "use": "Improves fruit quality, disease resistance, and water use efficiency",
+      "crops": ["potato", "cotton", "sugarcane", "tomato", "banana"],
+      "precaution": "Avoid application in saline soils; apply with irrigation water"
+    },
+    "ssp": {
+      "name": "SSP (Single Super Phosphate)",
+      "nutrient": "Phosphorus (16% P2O5) with Sulfur (11%)",
+      "use": "Good source of both phosphorus and sulfur; used for oilseeds",
+      "crops": ["groundnut", "soybean", "mustard", "tomato"],
+      "precaution": "Good for sulfur-deficient soils; apply as basal dose"
+    },
+    "organic": {
+      "name": "Organic / FYM (Farmyard Manure)",
+      "nutrient": "Low NPK but improves soil structure and microbial activity",
+      "use": "Applied before planting to improve soil health; provides slow-release nutrition",
+      "crops": ["all crops"],
+      "precaution": "Use well-decomposed FYM; fresh manure can burn crops"
+    }
+  },
+  "chatbot_responses": {
+    "greetings": ["hello", "hi", "hey", "namaste", "good morning", "good evening"],
+    "farewell": ["bye", "goodbye", "thanks", "thank you", "exit"],
+    "help_keywords": ["help", "what can you do", "features", "capabilities"]
+  }
+}

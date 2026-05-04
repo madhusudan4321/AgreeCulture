@@ -1,0 +1,11 @@
+{
+  "Random Forest": {
+    "accuracy": 86.75
+  },
+  "Decision Tree": {
+    "accuracy": 80.75
+  },
+  "KNN": {
+    "accuracy": 86.25
+  }
+}

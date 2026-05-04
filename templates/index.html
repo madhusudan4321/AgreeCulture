@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AgreeCulture — Smart AI farming assistant. Get ML-powered crop recommendations, fertilizer advice, plant identification, and expert chatbot guidance for modern agriculture." />
+  <title>AgreeCulture — Smart Farming Assistant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ──────────────────── NAVBAR ──────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-leaf">🌿</span>
+    <span class="logo-text">AgreeCulture</span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero" class="nav-link active">Home</a></li>
+    <li><a href="#predict-section" class="nav-link">Crop AI</a></li>
+    <li><a href="#chatbot-section" class="nav-link">Assistant</a></li>
+    <li><a href="#image-section" class="nav-link">Plant ID</a></li>
+    <li><a href="#stats-section" class="nav-link">ML Stats</a></li>
+  </ul>
+  <div class="nav-badge">BTech Project</div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ──────────────────── HERO ──────────────────── -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🏆 Smart Farming with AI & ML</div>
+    <h1 class="hero-title">
+      Grow Smarter.<br/>
+      <span class="hero-accent">Farm Better.</span>
+    </h1>
+    <p class="hero-subtitle">
+      AgreeCulture combines Machine Learning, a rule-based AI chatbot, and image recognition 
+      to give every farmer data-driven decisions — in seconds.
+    </p>
+    <div class="hero-cta-row">
+      <a href="#predict-section" class="btn btn-primary">Predict Best Crop →</a>
+      <a href="#chatbot-section" class="btn btn-outline">Chat with Assistant</a>
+    </div>
+    <div class="hero-stats-row">
+      <div class="hero-stat"><span class="stat-num">3</span><span class="stat-lbl">ML Models</span></div>
+      <div class="hero-stat"><span class="stat-num">10</span><span class="stat-lbl">Crops Covered</span></div>
+      <div class="hero-stat"><span class="stat-num">6</span><span class="stat-lbl">Input Parameters</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-circle">
+      <div class="circle-inner">
+        <div class="floating-card card-1">🌾 Rice — Kharif</div>
+        <div class="floating-card card-2">🌡️ Temp: 25°C</div>
+        <div class="floating-card card-3">✅ RF: 97.5%</div>
+        <div class="big-emoji">🌱</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── CROP PREDICTION ──────────────────── -->
+<section class="section" id="predict-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">🤖 Machine Learning</div>
+      <h2 class="section-title">Crop Recommendation System</h2>
+      <p class="section-sub">Enter your soil and climate data. Three ML models (Random Forest, Decision Tree, KNN) will vote for the best crop.</p>
+    </div>
+
+    <div class="predict-grid">
+      <!-- Input Form -->
+      <div class="card form-card">
+        <h3 class="card-title">📊 Enter Soil & Climate Data</h3>
+        <form id="predict-form">
+          <div class="input-grid">
+
+            <div class="input-group">
+              <label>Nitrogen (N) <span class="unit">kg/ha</span></label>
+              <input type="number" id="nitrogen" name="nitrogen" placeholder="0–140" min="0" max="140" value="80" required />
+              <span class="input-hint">Soil nitrogen content</span>
+            </div>
+
+            <div class="input-group">
+              <label>Phosphorus (P) <span class="unit">kg/ha</span></label>
+              <input type="number" id="phosphorus" name="phosphorus" placeholder="5–145" min="0" max="145" value="45" required />
+              <span class="input-hint">Soil phosphorus content</span>
+            </div>
+
+            <div class="input-group">
+              <label>Potassium (K) <span class="unit">kg/ha</span></label>
+              <input type="number" id="potassium" name="potassium" placeholder="5–205" min="0" max="205" value="40" required />
+              <span class="input-hint">Soil potassium content</span>
+            </div>
+
+            <div class="input-group">
+              <label>Temperature <span class="unit">°C</span></label>
+              <input type="number" id="temperature" name="temperature" placeholder="8–43" min="8" max="43" value="25" step="0.1" required />
+              <span class="input-hint">Average temperature</span>
+            </div>
+
+            <div class="input-group">
+              <label>Humidity <span class="unit">%</span></label>
+              <input type="number" id="humidity" name="humidity" placeholder="14–99" min="0" max="100" value="80" step="0.1" required />
+              <span class="input-hint">Relative humidity</span>
+            </div>
+
+            <div class="input-group">
+              <label>Rainfall <span class="unit">mm</span></label>
+              <input type="number" id="rainfall" name="rainfall" placeholder="20–298" min="0" max="500" value="200" step="0.1" required />
+              <span class="input-hint">Annual rainfall</span>
+            </div>
+
+          </div>
+
+          <div class="preset-row">
+            <span class="preset-label">Quick presets:</span>
+            <button type="button" class="preset-btn" onclick="setPreset('rice')">🌾 Rice</button>
+            <button type="button" class="preset-btn" onclick="setPreset('wheat')">🌿 Wheat</button>
+            <button type="button" class="preset-btn" onclick="setPreset('maize')">🌽 Maize</button>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="predict-btn">
+            <span id="predict-btn-text">🚀 Predict Best Crop</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="card result-card" id="predict-result" style="display:none;">
+        <h3 class="card-title">🏆 Recommendation Results</h3>
+
+        <div class="best-crop-box" id="best-crop-box">
+          <div class="best-crop-emoji" id="best-crop-emoji">🌾</div>
+          <div class="best-crop-name" id="best-crop-name">Loading...</div>
+          <div class="best-crop-label">Recommended Crop</div>
+        </div>
+
+        <!-- Model Comparison -->
+        <div class="model-votes">
+          <h4>Model Predictions</h4>
+          <div id="model-votes-list"></div>
+        </div>
+
+        <!-- Crop Info -->
+        <div class="crop-details" id="crop-details"></div>
+
+        <!-- Gemini AI Insight -->
+        <div class="gemini-insight-box" id="gemini-insight-box" style="display:none;">
+          <div class="gemini-insight-header">
+            <span class="gemini-spark">✨</span>
+            <span>AI Insight <span style="font-size:0.75rem;opacity:0.7;font-weight:400;">by Gemini</span></span>
+            <span class="gemini-loading" id="gemini-loading">Generating...</span>
+          </div>
+          <p class="gemini-insight-text" id="gemini-insight-text"></p>
+        </div>
+      </div>
+
+      <!-- Placeholder when no result yet -->
+      <div class="card result-placeholder" id="result-placeholder">
+        <div class="placeholder-icon">🔬</div>
+        <p>Fill in the form and click <b>Predict Best Crop</b> to see ML recommendations from 3 models.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── CHATBOT ──────────────────── -->
+<section class="section section-alt" id="chatbot-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">💬 AI Chatbot</div>
+      <h2 class="section-title">Farming Assistant</h2>
+      <p class="section-sub">Ask anything about crops, fertilizers, seasons, and growing techniques.</p>
+      <div class="ai-badge" id="ai-badge" style="display:none;">
+        <span class="ai-dot"></span> Powered by <strong>Google Gemini AI</strong>
+      </div>
+      <div class="ai-badge ai-badge-openrouter" id="ai-badge-openrouter" style="display:none;">
+        <span class="ai-dot" style="background:#7c3aed;"></span> Powered by <strong>OpenRouter AI</strong>
+      </div>
+      <div class="ai-badge ai-badge-fallback" id="ai-badge-fallback" style="display:none;">
+        &#9881; Running in <strong>local mode</strong> &mdash; add API keys to enable AI
+      </div>
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-window" id="chat-window">
+        <!-- Messages appear here -->
+        <div class="chat-message bot">
+          <div class="chat-bubble">
+            🌾 <b>Namaste! Welcome to AgreeCulture Assistant!</b><br/><br/>
+            I can help you with:<br/>
+            • <b>How to grow</b> any crop<br/>
+            • <b>Fertilizer</b> recommendations<br/>
+            • <b>Water</b> requirements<br/>
+            • <b>Diseases</b> & pest control<br/>
+            • <b>Season</b> & soil info<br/><br/>
+            Try typing: <i>"How to grow wheat?"</i>
+          </div>
+          <div class="chat-time">Assistant • now</div>
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <span class="suggest-label">Try asking:</span>
+        <button class="suggest-btn" onclick="sendSuggestion('How to grow wheat?')">How to grow wheat?</button>
+        <button class="suggest-btn" onclick="sendSuggestion('Best fertilizer for rice?')">Best fertilizer for rice?</button>
+        <button class="suggest-btn" onclick="sendSuggestion('Water requirements of maize?')">Water for maize?</button>
+        <button class="suggest-btn" onclick="sendSuggestion('Diseases of tomato?')">Tomato diseases?</button>
+      </div>
+
+      <div class="chat-input-row">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Ask about any crop... (e.g. 'Best season for potato?')"
+          onkeypress="if(event.key==='Enter') sendChat()"
+        />
+        <button class="btn btn-primary" onclick="sendChat()">Send →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── IMAGE RECOGNITION ──────────────────── -->
+<section class="section" id="image-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">📷 Image Recognition</div>
+      <h2 class="section-title">Plant Identification</h2>
+      <p class="section-sub">Upload a plant photo and get instant identification + farming information.</p>
+    </div>
+
+    <div class="image-grid">
+      <!-- Upload Card -->
+      <div class="card upload-card">
+        <h3 class="card-title">📤 Upload Plant Image</h3>
+        <div class="upload-zone" id="upload-zone" onclick="document.getElementById('image-input').click()">
+          <div class="upload-icon">📸</div>
+          <div class="upload-text">Click to upload or drag & drop</div>
+          <div class="upload-sub">PNG, JPG, JPEG (max 5MB)</div>
+          <img id="image-preview" class="image-preview" alt="Preview" style="display:none;" />
+        </div>
+        <input type="file" id="image-input" accept="image/*" style="display:none;" onchange="handleImageSelect(event)" />
+        <button class="btn btn-primary btn-full" id="identify-btn" onclick="identifyPlant()" disabled>
+          🔍 Identify Plant
+        </button>
+        <div class="supported-plants">
+          <span class="sp-label">Supports:</span>
+          <span>Rice, Wheat, Maize, Tomato, Potato, Cotton, Sugarcane, Mango, Groundnut, Soybean</span>
+        </div>
+      </div>
+
+      <!-- Image Result Card -->
+      <div class="card image-result-card" id="image-result" style="display:none;">
+        <h3 class="card-title">🌿 Identification Result</h3>
+        <div class="identified-plant">
+          <div class="plant-label" id="plant-label">—</div>
+          <div class="confidence-bar-wrap">
+            <span>Confidence:</span>
+            <div class="confidence-bar"><div class="confidence-fill" id="confidence-fill"></div></div>
+            <span id="confidence-pct">0%</span>
+          </div>
+        </div>
+        <div class="top3-predictions" id="top3-list"></div>
+        <div class="identified-crop-info" id="identified-crop-info"></div>
+      </div>
+
+      <div class="card image-placeholder" id="image-placeholder">
+        <div class="placeholder-icon">🌿</div>
+        <p>Upload a plant photo to identify it and get complete farming information.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── ML STATS ──────────────────── -->
+<section class="section section-alt" id="stats-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">📈 Model Performance</div>
+      <h2 class="section-title">ML Model Comparison</h2>
+      <p class="section-sub">Accuracy comparison across all three trained models.</p>
+    </div>
+
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-card loading-card">Loading model stats...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── FOOTER ──────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">🌿 AgreeCulture</div>
+    <div class="footer-text">BTech CSE Final Year Project · Smart Farming with AI/ML</div>
+    <div class="footer-tech">Flask · Scikit-learn · Python · HTML/CSS/JS</div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
