@@ -83,10 +83,9 @@ _gemini_error  = None
 
 # Each model has its own separate daily quota pool
 _GEMINI_MODELS = [
-    "gemini-2.5-flash",       # newest — best responses
-    "gemini-2.0-flash-lite",  # lightweight — separate quota
-    "gemini-2.0-flash",       # original
-    "gemini-flash-latest",    # alias fallback
+    "gemini-2.5-flash",               # newest — best responses
+    "gemini-2.0-flash",               # reliable workhorse
+    "gemini-2.0-flash-lite",          # lightweight — separate quota
 ]
 
 
@@ -206,12 +205,15 @@ _OPENROUTER_HEADERS = {
     "X-Title":       "AgreeCulture Smart Farming",
 }
 
-# Free models available on OpenRouter (no credits needed)
+# Free models available on OpenRouter (verified live — May 2026)
 # See full list: https://openrouter.ai/models?q=free
 _OPENROUTER_MODELS = [
-    "meta-llama/llama-3.1-8b-instruct:free",   # Meta Llama 3.1 8B — very capable
-    "mistralai/mistral-7b-instruct:free",        # Mistral 7B — fast and good
-    "google/gemma-2-9b-it:free",                 # Google Gemma 2 9B
+    "openai/gpt-oss-120b:free",                       # OpenAI OSS 120B — large & capable
+    "nvidia/nemotron-3-super-120b-a12b:free",         # NVIDIA Nemotron 120B
+    "openai/gpt-oss-20b:free",                        # OpenAI OSS 20B — fast
+    "minimax/minimax-m2.5:free",                      # MiniMax M2.5 — reliable
+    "liquid/lfm-2.5-1.2b-instruct:free",             # Liquid LFM — ultra-fast fallback
+    "openrouter/free",                                 # OpenRouter auto-routing (last resort)
 ]
 
 # Per-session chat history for OpenRouter

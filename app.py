@@ -31,7 +31,6 @@ except ImportError:
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from chatbot.chatbot_engine import get_response          # rule-based fallback
-from chatbot.image_classifier import predict_plant
 from chatbot.gemini_engine import (                       # Gemini AI
     get_gemini_response,
     get_crop_insight,
@@ -246,35 +245,6 @@ def chat_status():
     status = get_gemini_status()
     return jsonify(status)
 
-
-@app.route("/identify-plant", methods=["POST"])
-def identify_plant():
-    """
-    Image Recognition endpoint.
-    Accepts an uploaded image file, returns predicted plant name + info.
-    """
-    if "image" not in request.files:
-        return jsonify({"error": "No image file provided"}), 400
-
-    file = request.files["image"]
-
-    if file.filename == "":
-        return jsonify({"error": "No file selected"}), 400
-
-    if not allowed_file(file.filename):
-        return jsonify({"error": "File type not allowed. Use: PNG, JPG, JPEG"}), 400
-
-    # Save the uploaded file
-    from werkzeug.utils import secure_filename
-    filename = secure_filename(file.filename)
-    filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
-    file.save(filepath)
-
-    # Run prediction
-    result = predict_plant(filepath)
-    result["image_url"] = f"/static/uploads/{filename}"
-
-    return jsonify(result)
 
 
 @app.route("/model-stats")

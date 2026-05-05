@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="AgreeCulture — Smart AI farming assistant. Get ML-powered crop recommendations, fertilizer advice, plant identification, and expert chatbot guidance for modern agriculture." />
+  <meta name="description" content="AgreeCulture — Smart AI farming assistant. Get ML-powered crop recommendations, fertilizer advice, and expert chatbot guidance for modern agriculture." />
   <title>AgreeCulture — Smart Farming Assistant</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
@@ -23,7 +23,6 @@
     <li><a href="#hero" class="nav-link active">Home</a></li>
     <li><a href="#predict-section" class="nav-link">Crop AI</a></li>
     <li><a href="#chatbot-section" class="nav-link">Assistant</a></li>
-    <li><a href="#image-section" class="nav-link">Plant ID</a></li>
     <li><a href="#stats-section" class="nav-link">ML Stats</a></li>
   </ul>
   <div class="nav-badge">BTech Project</div>
@@ -42,7 +41,7 @@
       <span class="hero-accent">Farm Better.</span>
     </h1>
     <p class="hero-subtitle">
-      AgreeCulture combines Machine Learning, a rule-based AI chatbot, and image recognition 
+      AgreeCulture combines Machine Learning and an AI-powered chatbot
       to give every farmer data-driven decisions — in seconds.
     </p>
     <div class="hero-cta-row">
@@ -231,59 +230,6 @@
   </div>
 </section>
 
-<!-- ──────────────────── IMAGE RECOGNITION ──────────────────── -->
-<section class="section" id="image-section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">📷 Image Recognition</div>
-      <h2 class="section-title">Plant Identification</h2>
-      <p class="section-sub">Upload a plant photo and our <strong>Gemini Vision AI</strong> will instantly identify it and provide complete farming information.</p>
-    </div>
-
-    <div class="image-grid">
-      <!-- Upload Card -->
-      <div class="card upload-card">
-        <h3 class="card-title">📤 Upload Plant Image</h3>
-        <div class="upload-zone" id="upload-zone" onclick="document.getElementById('image-input').click()">
-          <div class="upload-icon">📸</div>
-          <div class="upload-text">Click to upload or drag & drop</div>
-          <div class="upload-sub">PNG, JPG, JPEG (max 5MB)</div>
-          <img id="image-preview" class="image-preview" alt="Preview" style="display:none;" />
-        </div>
-        <input type="file" id="image-input" accept="image/*" style="display:none;" onchange="handleImageSelect(event)" />
-        <button class="btn btn-primary btn-full" id="identify-btn" onclick="identifyPlant()" disabled>
-          🔍 Identify Plant
-        </button>
-        <div class="supported-plants">
-          <span class="sp-label">Supports:</span>
-          <span>Rice, Wheat, Maize, Tomato, Potato, Cotton, Sugarcane, Mango, Groundnut, Soybean</span>
-        </div>
-      </div>
-
-      <!-- Image Result Card -->
-      <div class="card image-result-card" id="image-result" style="display:none;">
-        <h3 class="card-title">🌿 Identification Result</h3>
-        <div class="identified-plant">
-          <div class="plant-label" id="plant-label">—</div>
-          <div id="plant-powered-by" style="margin-bottom:0.4rem;"></div>
-          <div class="plant-note" id="plant-note" style="display:none;font-size:0.82rem;color:#94a3b8;font-style:italic;margin-bottom:0.6rem;"></div>
-          <div class="confidence-bar-wrap">
-            <span>Confidence:</span>
-            <div class="confidence-bar"><div class="confidence-fill" id="confidence-fill"></div></div>
-            <span id="confidence-pct">0%</span>
-          </div>
-        </div>
-        <div class="top3-predictions" id="top3-list"></div>
-        <div class="identified-crop-info" id="identified-crop-info"></div>
-      </div>
-
-      <div class="card image-placeholder" id="image-placeholder">
-        <div class="placeholder-icon">🌿</div>
-        <p>Upload a plant photo to identify it and get complete farming information.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ──────────────────── ML STATS ──────────────────── -->
 <section class="section section-alt" id="stats-section">
