@@ -343,6 +343,25 @@ function displayImageResult(data) {
     document.getElementById("confidence-fill").style.width = confPct + "%";
   }, 100);
 
+  // Powered-by badge
+  const poweredByEl = document.getElementById("plant-powered-by");
+  if (poweredByEl) {
+    if (data.powered_by === "gemini-vision") {
+      poweredByEl.innerHTML = `<span class="chat-engine-tag" style="margin-left:0.5rem;">✨ Gemini Vision</span>`;
+    } else if (data.powered_by === "color-knn-fallback") {
+      poweredByEl.innerHTML = `<span class="chat-engine-tag fallback" style="margin-left:0.5rem;">⚙️ Offline Fallback</span>`;
+    } else {
+      poweredByEl.innerHTML = "";
+    }
+  }
+
+  // Observation note from Gemini
+  const noteEl = document.getElementById("plant-note");
+  if (noteEl) {
+    noteEl.textContent = data.note ? `🔬 ${data.note}` : "";
+    noteEl.style.display = data.note ? "block" : "none";
+  }
+
   // Top 3
   const top3 = data.top3 || [];
   const top3Container = document.getElementById("top3-list");
@@ -361,7 +380,7 @@ function displayImageResult(data) {
 
   // Crop info
   const info = data.crop_info;
-  if (info) {
+  if (info && info.season !== "N/A") {
     document.getElementById("identified-crop-info").innerHTML = `
       <div style="font-weight:700;font-size:0.85rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.75rem;">Crop Information</div>
       <div class="detail-row"><span class="detail-icon">📅</span> <span class="detail-val"><b>Season:</b> ${info.season}</span></div>
@@ -370,6 +389,9 @@ function displayImageResult(data) {
       <div class="detail-row"><span class="detail-icon">🧪</span> <span class="detail-val"><b>Fertilizer:</b> ${info.fertilizer}</span></div>
       <div class="detail-row"><span class="detail-icon">💡</span> <span class="detail-val">${info.tips}</span></div>
     `;
+  } else {
+    document.getElementById("identified-crop-info").innerHTML =
+      `<div style="color:#aaa;font-size:0.85rem;">ℹ️ No detailed crop data available for this plant in our database.</div>`;
   }
 }
 
